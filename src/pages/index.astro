@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import NavBar from "../components/common/NavBar.astro";
 import "../styles/style.css";
 ---
 
@@ -41,17 +42,7 @@ import "../styles/style.css";
             >
           </span>
         </a>
-        <nav
-          class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink/80"
-        >
-          <a href="#about" class="hover:text-deep transition">About</a>
-          <a href="#products" class="hover:text-deep transition">Products</a>
-          <a href="#why-us" class="hover:text-deep transition">Why Us</a>
-          <a href="#global" class="hover:text-deep transition">Global</a>
-          <a href="#gallery" class="hover:text-deep transition">Gallery</a>
-          <a href="#faq" class="hover:text-deep transition">FAQ</a>
-          <a href="#contact" class="hover:text-deep transition">Contact</a>
-        </nav>
+        <NavBar />
         <div class="hidden lg:flex items-center gap-3">
           <a
             href="#contact"
