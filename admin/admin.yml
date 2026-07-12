@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main # Make sure this matches your GitHub branch (main or master)
+
+media_folder: "images/uploads" # Where uploaded images go
+public_folder: "/images/uploads"
+
+collections:
+  - name: "faq"
+    label: "FAQ Items"
+    folder: "_faqs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Question", name: "title", widget: "string" }
+      - { label: "Answer", name: "body", widget: "text" }
