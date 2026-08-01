@@ -1,0 +1,85 @@
+backend:
+  name: git-gateway
+  branch: astro-migration
+
+media_folder: public/images
+
+collections:
+  - name: site
+    label: Site Settings
+    editor:
+      preview: false
+    files:
+      - name: site
+        label: Site Configuration
+        file: src/content/site/site.json
+        format: json
+        fields:
+          - name: company
+            label: Company
+            widget: object
+            fields:
+              - { name: name, label: Short Name, widget: string }
+              - { name: fullName, label: Full Name, widget: string }
+              - { name: subtitle, label: Subtitle, widget: string }
+              - { name: tagline, label: Tagline, widget: text }
+              - { name: slogan, label: Footer Slogan, widget: string }
+          - name: contact
+            label: Contact Information
+            widget: object
+            fields:
+              - { name: phone, label: Phone, widget: string }
+              - { name: email, label: Email, widget: string }
+              - { name: whatsapp, label: WhatsApp, widget: string }
+              - { name: hours, label: Business Hours, widget: string }
+          - name: social
+            label: Social Media
+            widget: object
+            fields:
+              - { name: linkedin, label: LinkedIn URL, widget: string }
+              - { name: instagram, label: Instagram URL, widget: string }
+              - { name: facebook, label: Facebook URL, widget: string }
+          - name: seo
+            label: SEO Defaults
+            widget: object
+            fields:
+              - { name: defaultTitle, label: Default Page Title, widget: string }
+              - { name: defaultDescription, label: Default Meta Description, widget: text }
+              - { name: siteUrl, label: Site URL, widget: string }
+
+  - name: products
+    label: Products
+    label_singular: Product
+    folder: src/content/products
+    create: true
+    extension: json
+    format: json
+    fields:
+      - { name: name, label: Product Name, widget: string }
+      - { name: image, label: Image, widget: image }
+      - { name: description, label: Description, widget: text }
+      - { name: tags, label: Tags, widget: list }
+      - { name: href, label: Link Target, widget: string, default: "#contact" }
+
+  - name: faq
+    label: FAQ
+    label_singular: FAQ Item
+    folder: src/content/faq
+    create: true
+    extension: json
+    format: json
+    fields:
+      - { name: question, label: Question, widget: string }
+      - { name: answer, label: Answer, widget: text }
+
+  - name: gallery
+    label: Gallery
+    label_singular: Gallery Image
+    folder: src/content/gallery
+    create: true
+    extension: json
+    format: json
+    fields:
+      - { name: image, label: Image, widget: image }
+      - { name: alt, label: Alt Text, widget: string }
+      - { name: rowSpan, label: Row Span, widget: number, default: 1, value_type: int, min: 1, max: 2 }
