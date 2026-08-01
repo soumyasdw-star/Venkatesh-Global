@@ -1,10 +1,12 @@
 ---
+import { site } from "../config/site";
+
 interface Props {
   title: string;
-  description: string;
+  description?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description = site.seo.defaultDescription } = Astro.props;
 ---
 
 <!doctype html>

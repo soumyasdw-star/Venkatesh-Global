@@ -1,4 +1,5 @@
 ---
+import { site } from "../config/site";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import NavBar from "../components/layout/NavBar.astro";
 import Footer from "../components/layout/Footer.astro";
@@ -20,10 +21,7 @@ import Container from "../components/ui/Container.astro";
 import "../styles/style.css";
 ---
 
-<BaseLayout
-  title="Venkatesh Cotton Corporation | Cotton Bale Manufacturer & Agricultural Commodity Supplier, India"
-  description="Venkatesh Cotton Corporation manufactures premium cotton bales and trades maize, pulses and food grains across India, building long-term partnerships with domestic and international buyers."
->
+<BaseLayout title={site.seo.defaultTitle}>
   <header
     id="site-nav"
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
@@ -47,10 +45,10 @@ import "../styles/style.css";
           </span>
           <span class="leading-tight">
             <span class="block font-display text-lg font-medium text-deep"
-              >Venkatesh Cotton</span
+              >{site.company.name}</span
             >
             <span class="block font-mono-label text-[10px] text-field uppercase"
-              >Corporation</span
+              >{site.company.subtitle}</span
             >
           </span>
         </a>

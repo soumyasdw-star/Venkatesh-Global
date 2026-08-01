@@ -1,8 +1,8 @@
 ---
+import { site } from "../../config/site";
 import Container from "../ui/Container.astro";
 ---
-
----
+import { site } from "../../config/site";
 import Container from "../ui/Container.astro";
 ---
 
@@ -11,14 +11,13 @@ import Container from "../ui/Container.astro";
     <div class="grid md:grid-cols-4 gap-12">
     <div>
       <span class="block font-display text-xl text-cotton"
-        >Venkatesh Cotton</span
+        >{site.company.name}</span
       >
       <span class="block font-mono-label text-[10px] uppercase text-gold mt-1"
-        >Corporation</span
+        >{site.company.subtitle}</span
       >
       <p class="mt-4 text-sm">
-        Manufacturers of premium cotton bales and trusted suppliers of
-        agricultural commodities from India.
+        {site.company.tagline}
       </p>
     </div>
     <div>
@@ -71,10 +70,10 @@ import Container from "../ui/Container.astro";
   </Container>
   <Container class="mt-14 pt-6 border-t border-cotton/10 text-xs flex flex-col sm:flex-row justify-between gap-2">
     <p>
-      &copy; <span id="year"></span> Venkatesh Cotton Corporation. All rights reserved.
+      &copy; <span id="year"></span> {site.company.fullName}. All rights reserved.
     </p>
     <p>
-      Cotton Bale Manufacturer India &middot; Agricultural Commodities India
+      {site.company.slogan}
     </p>
   </Container>
 </footer>

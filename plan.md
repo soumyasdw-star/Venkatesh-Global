@@ -84,17 +84,58 @@ Page-specific sections should become feature modules.
 
 ```
 src/
+
+    components/
+
+        ui/
+
+            Container.astro
+            SectionTitle.astro
+
+        layout/
+
+            Navbar.astro
+            Footer.astro
+
+    features/
+
+        home/
+
+            Hero.astro
+            About.astro
+            Products.astro
+            WhyUs.astro
+            Industries.astro
+            Quality.astro
+            Global.astro
+            Process.astro
+            Gallery.astro
+            FAQ.astro
+            CTABanner.astro
+            Contact.astro
+            FloatingButtons.astro
+            Ledger.astro
+
     layouts/
+
         BaseLayout.astro
 
     pages/
+
         index.astro
 
     styles/
+
         style.css
 
+    config/
+
+        site.ts
+
 public/
+
     js/
+
         script.js
 ```
 
@@ -221,24 +262,20 @@ Deliverables:
 
 ---
 
-# Phase 4
+# ✅ Phase 4
 
 Homepage Componentization
 
-Goal
+Status:
 
-Split the homepage into maintainable feature modules.
+Completed
 
-Tasks
+Deliverables:
 
-- Navbar
-- Hero
-- About
-- Products
-- Gallery
-- FAQ
-- Contact
-- Footer
+- NavBar extracted to components/layout/
+- Footer extracted to components/layout/
+- Hero, About, Products, WhyUs, Industries, Quality, Global, Process, Gallery, FAQ, CTABanner, Contact, FloatingButtons, Ledger extracted to features/home/
+- Index page renders purely from composed components
 
 Expected Result
 
@@ -266,49 +303,39 @@ Expected Result
 
 ---
 
-# Phase 5
+# ✅ Phase 5
 
 Reusable UI Components
 
-Goal
+Status:
 
-Extract reusable UI elements.
+Completed
 
-Candidates
+Deliverables:
 
-- Button
-- SectionTitle
-- Container
-- Card
-- Badge
-
-Avoid premature abstraction.
-
-Only extract components after duplication appears.
+- Container (src/components/ui/Container.astro) — extracted repeated max-w-7xl mx-auto px-6 lg:px-10 pattern, used in 13 places
+- SectionTitle (src/components/ui/SectionTitle.astro) — extracted repeated num-label + heading pattern, used in 9 sections
+- Button, Card, Badge intentionally deferred — insufficient duplication to warrant abstraction
 
 ---
 
-# Phase 6
+# ✅ Phase 6
 
 Configuration Layer
 
-Create
+Status:
 
-```
-src/config/site.ts
-```
+Completed
 
-Purpose
+Deliverables:
 
-Centralize:
-
-- company name
-- URLs
-- contact information
-- social media
-- SEO defaults
-
-This avoids duplicated business information.
+- Created src/config/site.ts centralizing:
+  - Company name, full name, subtitle, tagline, slogan
+  - Contact info (phone, email, WhatsApp, business hours)
+  - Social media links (LinkedIn, Instagram, Facebook)
+  - SEO defaults (title, description, site URL)
+- Updated 6 components to reference config:
+  - BaseLayout.astro, index.astro, Footer.astro, Contact.astro, FloatingButtons.astro, About.astro
 
 ---
 

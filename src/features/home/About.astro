@@ -1,4 +1,5 @@
 ---
+import { site } from "../../config/site";
 import Container from "../../components/ui/Container.astro";
 import SectionTitle from "../../components/ui/SectionTitle.astro";
 ---
@@ -13,7 +14,7 @@ import SectionTitle from "../../components/ui/SectionTitle.astro";
           titleClass="text-deep leading-tight"
         />
         <p class="mt-6 text-ink/75 leading-relaxed">
-          Venkatesh Cotton Corporation manufactures premium cotton bales and
+          {site.company.fullName} manufactures premium cotton bales and
           trades maize, pulses and food grains from sourcing regions across
           India. Our domestic network has been built over years of consistent
           delivery and straightforward dealing, and we are now extending that

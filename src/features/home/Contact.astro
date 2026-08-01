@@ -1,4 +1,5 @@
 ---
+import { site } from "../../config/site";
 import Container from "../../components/ui/Container.astro";
 import SectionTitle from "../../components/ui/SectionTitle.astro";
 ---
@@ -133,39 +134,39 @@ import SectionTitle from "../../components/ui/SectionTitle.astro";
           <p class="text-ink/50 text-xs uppercase font-mono-label">
             WhatsApp
           </p>
-          <p class="text-deep font-medium mt-1">+91 00000 00000</p>
+          <p class="text-deep font-medium mt-1">{site.contact.whatsapp}</p>
         </div>
         <div>
           <p class="text-ink/50 text-xs uppercase font-mono-label">Email</p>
-          <p class="text-deep font-medium mt-1">info@venkateshcotton.com</p>
+          <p class="text-deep font-medium mt-1">{site.contact.email}</p>
         </div>
         <div>
           <p class="text-ink/50 text-xs uppercase font-mono-label">Phone</p>
-          <p class="text-deep font-medium mt-1">+91 00000 00000</p>
+          <p class="text-deep font-medium mt-1">{site.contact.phone}</p>
         </div>
         <div>
           <p class="text-ink/50 text-xs uppercase font-mono-label">
             Business Hours
           </p>
           <p class="text-deep font-medium mt-1">
-            Mon &ndash; Sat, 9:30 AM &ndash; 6:30 PM IST
+            {site.contact.hours}
           </p>
         </div>
         <div class="flex gap-3 pt-2">
           <a
-            href="#"
+            href={site.social.linkedin}
             aria-label="LinkedIn"
             class="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center hover:border-deep transition"
             >in</a
           >
           <a
-            href="#"
+            href={site.social.instagram}
             aria-label="Instagram"
             class="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center hover:border-deep transition"
             >ig</a
           >
           <a
-            href="#"
+            href={site.social.facebook}
             aria-label="Facebook"
             class="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center hover:border-deep transition"
             >fb</a
