@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: soumyasdw-star/Venkatesh-Global
-  branch: astro-migration
+  branch: main
 
 media_folder: public/images
 
@@ -44,8 +44,16 @@ collections:
             label: SEO Defaults
             widget: object
             fields:
-              - { name: defaultTitle, label: Default Page Title, widget: string }
-              - { name: defaultDescription, label: Default Meta Description, widget: text }
+              - {
+                  name: defaultTitle,
+                  label: Default Page Title,
+                  widget: string,
+                }
+              - {
+                  name: defaultDescription,
+                  label: Default Meta Description,
+                  widget: text,
+                }
               - { name: siteUrl, label: Site URL, widget: string }
 
   - name: products
@@ -83,4 +91,12 @@ collections:
     fields:
       - { name: image, label: Image, widget: image }
       - { name: alt, label: Alt Text, widget: string }
-      - { name: rowSpan, label: Row Span, widget: number, default: 1, value_type: int, min: 1, max: 2 }
+      - {
+          name: rowSpan,
+          label: Row Span,
+          widget: number,
+          default: 1,
+          value_type: int,
+          min: 1,
+          max: 2,
+        }
