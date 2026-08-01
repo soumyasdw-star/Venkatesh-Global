@@ -339,25 +339,27 @@ Deliverables:
 
 ---
 
-# Phase 7
+# ✅ Phase 7
 
 Content Collections
 
-Move business content out of components.
+Status:
 
-Collections
+Completed
 
-```
-company/
+Deliverables:
 
-products/
+- src/content.config.ts — collection schemas with Zod validation
+- products/ — 4 product entries (Cotton Bales, Maize, Pulses, Food Grains)
+- faq/ — 9 FAQ entries with question/answer pairs
+- gallery/ — 8 gallery image entries with alt text and row span
+- Products.astro rewritten to render from collection
+- FAQ.astro rewritten to render from collection
+- Gallery.astro rewritten to render from collection
+- company/ collection deferred — covered by src/config/site.ts
+- testimonials/ deferred — site has no testimonials section
 
-testimonials/
-
-gallery/
-```
-
-Components should become presentation only.
+Components become presentation only.
 
 ---
 
