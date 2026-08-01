@@ -1,0 +1,60 @@
+---
+import Container from "../../components/ui/Container.astro";
+import SectionTitle from "../../components/ui/SectionTitle.astro";
+---
+
+<section id="gallery" class="py-28 lg:py-36 bg-deep-900 text-cotton">
+  <Container>
+    <div class="max-w-2xl reveal">
+      <SectionTitle
+        label="Gallery"
+        title="A look across our operations"
+        titleClass="text-cotton"
+      />
+    </div>
+    <div
+      class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[180px]"
+    >
+      <img
+        class="reveal w-full h-full object-cover rounded-2xl row-span-2"
+        src="https://images.unsplash.com/photo-1620200423727-8127f75d4f96?q=80&w=900&auto=format&fit=crop"
+        alt="Cotton bales stacked"
+      />
+      <img
+        class="reveal w-full h-full object-cover rounded-2xl"
+        src="https://images.unsplash.com/photo-1601593768799-76e5e1b3e70d?q=80&w=900&auto=format&fit=crop"
+        alt="Maize crop"
+      />
+      <img
+        class="reveal w-full h-full object-cover rounded-2xl"
+        src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?q=80&w=900&auto=format&fit=crop"
+        alt="Agricultural warehouse"
+      />
+      <img
+        class="reveal w-full h-full object-cover rounded-2xl row-span-2"
+        src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?q=80&w=900&auto=format&fit=crop"
+        alt="Shipping containers at port"
+      />
+      <img
+        class="reveal w-full h-full object-cover rounded-2xl"
+        src="https://images.unsplash.com/photo-1595231712325-9fedecef7575?q=80&w=900&auto=format&fit=crop"
+        alt="Processing facility"
+      />
+      <img
+        class="reveal w-full h-full object-cover rounded-2xl"
+        src="https://images.unsplash.com/photo-1595475207225-428b62bda831?q=80&w=900&auto=format&fit=crop"
+        alt="Grain sacks packaged for dispatch"
+      />
+      <img
+        class="reveal w-full h-full object-cover rounded-2xl"
+        src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=900&auto=format&fit=crop"
+        alt="Cargo ship carrying containers"
+      />
+      <img
+        class="reveal w-full h-full object-cover rounded-2xl"
+        src="https://images.unsplash.com/photo-1594179047519-f347310d3322?q=80&w=900&auto=format&fit=crop"
+        alt="Cotton farm at golden hour"
+      />
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,10 @@
+---
+const {
+  maxWidth = 'max-w-7xl',
+  class: extraClass = '',
+} = Astro.props;
+---
+
+<div class={`${maxWidth} mx-auto px-6 lg:px-10 ${extraClass}`}>
+  <slot />
+</div>
