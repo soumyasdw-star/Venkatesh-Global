@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: soumyasdw-star/Venkatesh-Global
   branch: astro-migration
 
 media_folder: public/images
