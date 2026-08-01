@@ -1,0 +1,79 @@
+---
+import { site } from "../../config/site";
+import Container from "../ui/Container.astro";
+---
+import { site } from "../../config/site";
+import Container from "../ui/Container.astro";
+---
+
+<footer class="bg-deep-900 text-cotton/70 pt-20 pb-8">
+  <Container>
+    <div class="grid md:grid-cols-4 gap-12">
+    <div>
+      <span class="block font-display text-xl text-cotton"
+        >{site.company.name}</span
+      >
+      <span class="block font-mono-label text-[10px] uppercase text-gold mt-1"
+        >{site.company.subtitle}</span
+      >
+      <p class="mt-4 text-sm">
+        {site.company.tagline}
+      </p>
+    </div>
+    <div>
+      <p class="text-cotton text-sm font-semibold mb-4">Quick Links</p>
+      <ul class="space-y-2 text-sm">
+        <li>
+          <a href="#products" class="hover:text-gold-light">Products</a>
+        </li>
+        <li><a href="#about" class="hover:text-gold-light">About</a></li>
+        <li>
+          <a href="#contact" class="hover:text-gold-light">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-cotton text-sm font-semibold mb-4">Legal</p>
+      <ul class="space-y-2 text-sm">
+        <li>
+          <a href="#" class="hover:text-gold-light">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#" class="hover:text-gold-light">Terms of Service</a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-cotton text-sm font-semibold mb-4">Newsletter</p>
+      <form
+        class="flex gap-2"
+        onsubmit="
+            event.preventDefault();
+            this.reset();
+            alert('Subscribed.');
+          "
+      >
+        <input
+          type="email"
+          required
+          placeholder="Your email"
+          class="flex-1 min-w-0 rounded-full px-4 py-2 text-sm text-ink bg-cotton"
+        />
+        <button
+          class="px-4 py-2 rounded-full bg-gold text-deep-900 text-sm font-semibold"
+        >
+          Join
+        </button>
+      </form>
+    </div>
+  </div>
+  </Container>
+  <Container class="mt-14 pt-6 border-t border-cotton/10 text-xs flex flex-col sm:flex-row justify-between gap-2">
+    <p>
+      &copy; <span id="year"></span> {site.company.fullName}. All rights reserved.
+    </p>
+    <p>
+      {site.company.slogan}
+    </p>
+  </Container>
+</footer>

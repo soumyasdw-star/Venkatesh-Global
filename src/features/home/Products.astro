@@ -1,0 +1,53 @@
+---
+import { getCollection } from "astro:content";
+import Container from "../../components/ui/Container.astro";
+import SectionTitle from "../../components/ui/SectionTitle.astro";
+
+const products = await getCollection("products");
+---
+
+<section id="products" class="py-28 lg:py-36 bg-deep text-cotton">
+  <Container>
+    <div class="max-w-2xl reveal">
+      <SectionTitle
+        label="Our Products"
+        title="Premium cotton bales and a dependable line of agricultural commodities"
+        titleClass="text-cotton"
+      />
+    </div>
+
+    <div class="mt-16 grid md:grid-cols-2 gap-8">
+      {
+        products.map((product) => (
+          <div class="reveal rounded-3xl overflow-hidden bg-deep-700 card-hover">
+            <img
+              src={product.data.image}
+              alt={product.data.name}
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-8">
+              <h3 class="font-display text-2xl">{product.data.name}</h3>
+              <p class="mt-3 text-cotton/70 text-sm leading-relaxed">
+                {product.data.description}
+              </p>
+              <ul
+                class="mt-4 flex flex-wrap gap-2 text-xs font-mono-label uppercase"
+              >
+                {product.data.tags.map((tag: string) => (
+                  <li class="px-3 py-1 rounded-full border border-gold/40 text-gold-light">
+                    {tag}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={product.data.href}
+                class="mt-6 inline-block text-sm font-semibold text-gold-light hover:text-gold transition"
+                >Request Quote &rarr;</a
+              >
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+</section>

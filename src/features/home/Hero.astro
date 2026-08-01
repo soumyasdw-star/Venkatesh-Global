@@ -1,0 +1,65 @@
+---
+import Container from "../../components/ui/Container.astro";
+---
+
+<section
+  id="home"
+  class="relative min-h-screen flex items-end overflow-hidden"
+>
+  <div class="absolute inset-0">
+    <img
+      src="https://images.unsplash.com/photo-1594179047519-f347310d3322?q=80&w=2400&auto=format&fit=crop"
+      alt="Cotton field ready for harvest"
+      class="w-full h-full object-cover"
+    />
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-deep-900 via-deep-900/70 to-harbor-800/40"
+    >
+    </div>
+    <div class="absolute inset-0 bg-fieldgrad opacity-40"></div>
+  </div>
+  <Container class="relative z-10 pb-24 pt-40 w-full">
+    <p class="num-label uppercase mb-5 reveal">
+      Cotton Bales &middot; Maize &middot; Pulses &middot; Food Grains
+    </p>
+    <h1
+      class="font-display text-4xl sm:text-5xl lg:text-6xl text-cotton font-medium max-w-3xl leading-[1.12] reveal"
+    >
+      Delivering Quality Agricultural Commodities with Trust, Consistency
+      &amp; Global Vision
+    </h1>
+    <p class="mt-6 text-cotton/80 max-w-xl text-base lg:text-lg reveal">
+      Manufacturers of premium cotton bales and trusted suppliers of maize,
+      pulses and agricultural commodities. Building long-term partnerships
+      across India and international markets.
+    </p>
+    <div class="mt-10 flex flex-wrap gap-4 reveal">
+      <a
+        href="#products"
+        class="px-7 py-3.5 rounded-full bg-gold text-deep-900 font-semibold text-sm hover:bg-gold-light transition"
+        >Explore Products</a
+      >
+      <a
+        href="#contact"
+        class="px-7 py-3.5 rounded-full border border-cotton/40 text-cotton font-semibold text-sm hover:bg-cotton/10 transition"
+        >Request a Quote</a
+      >
+    </div>
+  </Container>
+  <a
+    href="#ledger"
+    aria-label="Scroll down"
+    class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-cotton/70 animate-bounce"
+  >
+    <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.8"
+    >
+      <path d="M12 4v16M5 13l7 7 7-7"></path>
+    </svg>
+  </a>
+</section>

@@ -1,0 +1,71 @@
+---
+import Container from "../../components/ui/Container.astro";
+import SectionTitle from "../../components/ui/SectionTitle.astro";
+---
+
+<section class="py-28 lg:py-36 bg-cotton">
+  <Container>
+    <div class="max-w-2xl reveal">
+      <SectionTitle
+        label="Business Process"
+        title="From first inquiry to after-sales support"
+      />
+    </div>
+
+    <div class="mt-16 overflow-x-auto">
+      <ol
+        class="flex gap-6 min-w-[900px] lg:min-w-0 lg:grid lg:grid-cols-5 xl:grid-cols-10"
+      >
+        <li class="reveal flex-1">
+          <span class="font-mono-label text-gold text-xs">01</span>
+          <p class="mt-2 font-display text-base text-deep">Inquiry</p>
+        </li>
+        <li class="reveal flex-1">
+          <span class="font-mono-label text-gold text-xs">02</span>
+          <p class="mt-2 font-display text-base text-deep">Quotation</p>
+        </li>
+        <li class="reveal flex-1">
+          <span class="font-mono-label text-gold text-xs">03</span>
+          <p class="mt-2 font-display text-base text-deep">Negotiation</p>
+        </li>
+        <li class="reveal flex-1">
+          <span class="font-mono-label text-gold text-xs">04</span>
+          <p class="mt-2 font-display text-base text-deep">
+            Quality Confirmation
+          </p>
+        </li>
+        <li class="reveal flex-1">
+          <span class="font-mono-label text-gold text-xs">05</span>
+          <p class="mt-2 font-display text-base text-deep">
+            Order Finalization
+          </p>
+        </li>
+        <li class="reveal flex-1">
+          <span class="font-mono-label text-gold text-xs">06</span>
+          <p class="mt-2 font-display text-base text-deep">Packaging</p>
+        </li>
+        <li class="reveal flex-1">
+          <span class="font-mono-label text-gold text-xs">07</span>
+          <p class="mt-2 font-display text-base text-deep">Documentation</p>
+        </li>
+        <li class="reveal flex-1">
+          <span class="font-mono-label text-gold text-xs">08</span>
+          <p class="mt-2 font-display text-base text-deep">
+            Shipping Coordination
+          </p>
+        </li>
+        <li class="reveal flex-1">
+          <span class="font-mono-label text-gold text-xs">09</span>
+          <p class="mt-2 font-display text-base text-deep">Delivery</p>
+        </li>
+        <li class="reveal flex-1">
+          <span class="font-mono-label text-gold text-xs">10</span>
+          <p class="mt-2 font-display text-base text-deep">
+            After Sales Support
+          </p>
+        </li>
+      </ol>
+      <div class="mt-6 h-px bg-deep/10 min-w-[900px] lg:min-w-0"></div>
+    </div>
+  </Container>
+</section>

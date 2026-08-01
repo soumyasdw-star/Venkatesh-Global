@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import Container from "../../components/ui/Container.astro";
+import SectionTitle from "../../components/ui/SectionTitle.astro";
+
+const images = await getCollection("gallery");
+---
+
+<section id="gallery" class="py-28 lg:py-36 bg-deep-900 text-cotton">
+  <Container>
+    <div class="max-w-2xl reveal">
+      <SectionTitle
+        label="Gallery"
+        title="A look across our operations"
+        titleClass="text-cotton"
+      />
+    </div>
+    <div
+      class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[180px]"
+    >
+      {images.map((image) => (
+        <img
+          class={`reveal w-full h-full object-cover rounded-2xl ${image.data.rowSpan === 2 ? "row-span-2" : ""}`}
+          src={image.data.image}
+          alt={image.data.alt}
+        />
+      ))}
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,41 @@
+---
+import { getCollection } from "astro:content";
+import Container from "../../components/ui/Container.astro";
+import SectionTitle from "../../components/ui/SectionTitle.astro";
+
+const faqs = await getCollection("faq");
+---
+
+<section id="faq" class="py-28 lg:py-36 bg-cotton">
+  <Container maxWidth="max-w-4xl">
+    <div class="reveal">
+      <SectionTitle
+        label="FAQ"
+        title="Common questions from our buyers"
+      />
+    </div>
+
+    <div
+      class="mt-14 divide-y divide-black/10 border-y border-black/10"
+      id="faq-list"
+    >
+      {faqs.map((faq) => (
+        <div class="faq-item py-2">
+          <button
+            class="faq-q w-full text-left py-5 flex justify-between items-center gap-4"
+          >
+            <span class="font-display text-lg text-deep"
+              >{faq.data.question}</span
+            >
+            <span class="faq-icon text-gold text-xl">+</span>
+          </button>
+          <div class="accordion-content">
+            <p class="pb-5 text-ink/70 text-sm leading-relaxed">
+              {faq.data.answer}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </Container>
+</section>
